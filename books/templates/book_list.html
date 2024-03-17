@@ -1,0 +1,10 @@
+{% for book in books %}
+    <h2 style="text-align:center";>{{ book.title }}</h2></br>
+    <p style="text-align:center";>{{ book.author }}</p></br>
+    <p style="text-align:center";>{{ book.description }}</p></br>
+    <p style="text-align:center";>Rating: {{ book.rating }}</p>
+{% empty %}
+    <p>No books available.</p>
+{% endfor %}
+<div style="text-align:center";>
+<a href="{% url 'add_book' %}" >Add Book</a></div>
